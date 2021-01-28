@@ -1,0 +1,21 @@
+<div [style.direction]="currentLanguage.dir">
+  <mat-sidenav-container fullscreen class="example-container">
+    <mat-sidenav
+      [position]="currentLanguage.dir === 'rtl' ? 'end' : 'start'"
+      #sidenav
+      mode="over"
+      [(opened)]="opened"
+    >
+      <app-sidenav (closeMenu)="sidenav.toggle()"></app-sidenav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <app-header
+        (langugaeChange)="changelanguage($event)"
+        [lang]="currentLanguage.language ? currentLanguage.language : 'en'"
+        (toggleMenu)="sidenav.toggle()"
+      ></app-header>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

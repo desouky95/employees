@@ -1,0 +1,19 @@
+.page-container{
+  padding: 2em;
+  .page-title{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 1em 0;
+    width: fit-content;
+  }
+  .page-content{
+    // overflow-x: auto;
+
+  }
+}
+
+@media (min-width:641px)  {
+  .page-content {
+    // overflow-x: unset;
+  }
+ }

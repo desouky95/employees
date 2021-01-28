@@ -1,0 +1,63 @@
+{
+  "HEADER" : {
+    "TITLE" : "Company Management System"
+  },
+  "LANGUAGES" :{
+    "EN" : "English",
+    "AR" : "Arabic"
+  },
+  "AUTH" : {
+    "SIGNIN" : "Sign in"
+  },
+  "ACTIONS" : {
+    "SUBMIT" : "Submit",
+    "EDIT" : "Edit",
+    "DELETE" : "Delete",
+    "CREATE" : "Create",
+    "UPDATE" : "Update",
+    "SIGNOUT" : "Sign out"
+  },
+  "INPUTS" : {
+    "EMAIL" : {
+      "LABEL" : "Enter your email",
+      "PLACEHOLDER" : "Email Address",
+      "ERROR" : "Email isn't correct"
+    },
+    "PASSWORD" : {
+      "LABEL" : "Enter your password",
+      "PLACEHOLDER" : "Password",
+      "ERROR" : "Password isn't correct"
+    },
+    "NAME" : {
+      "LABEL" : "Enter name",
+      "PLACEHOLDER" : "Name",
+      "ERROR" : "Name isn't correct"
+    },
+    "PHONE" : {
+      "LABEL" : "Enter Phone",
+      "PLACEHOLDER" : "Phone",
+      "ERROR" : "Phone isn't correct"
+    },
+    "AGE" : {
+      "LABEL" : "Enter Age",
+      "PLACEHOLDER" : "Age",
+      "ERROR" : "Age isn't correct"
+    },
+    "GENDER" : {
+      "LABEL" : "Choose Gender",
+      "PLACEHOLDER" : "Gender",
+      "VALUES" :{
+        "MALE" : "Male",
+        "FEMALE" : "Female"
+      }
+    },
+    "ISACTIVE" : {
+      "LABEL" : "Active"
+    }
+  },
+  "PAGES":{
+    "EMPLOYEES" : "Employees",
+    "CREATEEMPLOYEE" : "Add Employee",
+    "EDITEMPLOYEE" : "Edit Employee"
+  }
+}

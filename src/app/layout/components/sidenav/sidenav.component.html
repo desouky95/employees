@@ -1,0 +1,13 @@
+<div class="side-nav-header">
+  <button mat-icon-button (click)="toggleClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<button [routerLink]="['employees']" (click)="toggleClose()" class="e-btn w-100" mat-button>
+  <mat-icon>groups</mat-icon>
+  <span>{{ 'PAGES.EMPLOYEES' |translate}}</span>
+</button>
+<button  (click)="signout()" class="e-btn w-100" mat-button>
+  <mat-icon>exit_to_app</mat-icon>
+  <span>{{ 'ACTIONS.SIGNOUT' |translate}}</span>
+</button>

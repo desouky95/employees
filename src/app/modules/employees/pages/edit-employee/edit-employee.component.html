@@ -1,0 +1,97 @@
+<app-page-template>
+  <div title>
+    <ng-container *ngIf="!createHandler">
+      {{ "PAGES.EDITEMPLOYEE" | translate }}
+    </ng-container>
+    <ng-container *ngIf="createHandler">
+      {{ "PAGES.CREATEEMPLOYEE" | translate }}
+    </ng-container>
+  </div>
+  <div content>
+    <div class="col-lg-6 col-md-12 col-12 p-0">
+      <form class="e-form" [formGroup]="editForm">
+        <div class="form-content row">
+          <div class="col-lg-6 col-md-6 col-12 mb-2">
+            <mat-form-field class="w-100" appearance="fill">
+              <mat-label>{{ "INPUTS.NAME.LABEL" | translate }}</mat-label>
+              <input
+                matInput
+                placeholder="{{ 'INPUTS.NAME.PLACEHOLDER' | translate }}"
+                formControlName="name"
+              />
+              <mat-error>{{ "INPUTS.NAME.ERROR" | translate }}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-2">
+            <mat-form-field class="w-100" appearance="fill">
+              <mat-label>{{ "INPUTS.PHONE.LABEL" | translate }}</mat-label>
+              <input
+                matInput
+                placeholder="{{ 'INPUTS.PHONE.PLACEHOLDER' | translate }}"
+                formControlName="phone"
+                required
+              />
+              <mat-error>{{ "INPUTS.PHONE.ERROR" | translate }}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-2">
+            <mat-form-field class="w-100" appearance="fill">
+              <mat-label>{{ "INPUTS.AGE.LABEL" | translate }}</mat-label>
+              <input
+                type="number"
+                matInput
+                placeholder="{{ 'INPUTS.AGE.PLACEHOLDER' | translate }}"
+                formControlName="age"
+                required
+              />
+              <mat-error>{{ "INPUTS.AGE.ERROR" | translate }}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-2">
+            <mat-form-field class="w-100" appearance="fill">
+              <mat-label>{{ "INPUTS.GENDER.LABEL" | translate }}</mat-label>
+              <mat-select formControlName="gender" required>
+                <mat-option>--</mat-option>
+                <mat-option [value]="'male'">
+                  {{ "INPUTS.GENDER.VALUES.MALE" | translate }}
+                </mat-option>
+                <mat-option [value]="'female'">
+                  {{ "INPUTS.GENDER.VALUES.FEMALE" | translate }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-2">
+            <mat-checkbox class="w-100" formControlName="isActive">{{
+              "INPUTS.ISACTIVE.LABEL" | translate
+            }}</mat-checkbox>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-2">
+            <ng-container *ngIf="!createHandler">
+              <button
+                class="w-100"
+                color="primary"
+                [disabled]="!editForm.touched || !editForm.valid"
+                mat-raised-button
+                (click)="updateEmployee()"
+              >
+                {{ "ACTIONS.UPDATE" | translate }}
+              </button>
+            </ng-container>
+            <ng-container *ngIf="createHandler">
+              <button
+                class="w-100"
+                color="primary"
+                [disabled]="!editForm.valid"
+                mat-raised-button
+                (click)="createEmployee()"
+              >
+                {{ "ACTIONS.CREATE" | translate }}
+              </button>
+            </ng-container>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</app-page-template>

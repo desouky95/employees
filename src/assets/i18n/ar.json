@@ -1,0 +1,62 @@
+{
+  "HEADER" : {
+    "TITLE" : "برنامج ادارة الشركة"
+  },
+  "LANGUAGES" :{
+    "EN" : "انجليزي",
+    "AR" : "عربي"
+  },
+  "AUTH" : {
+    "SIGNIN" : "تسجيل دخول"
+  },
+  "ACTIONS" : {
+    "SUBMIT" : "تسجيل",
+    "EDIT" : "تعديل",
+    "DELETE" : "مسح",
+    "UPDATE" : "تحديث",
+    "CREATE" : "اضف",
+    "SIGNOUT" : "تسجيل خروج"
+  }
+  ,"INPUTS" : {
+    "EMAIL" : {
+      "LABEL" : "ادخل بريدك الالكتروني",
+      "PLACEHOLDER" : "البريد الالكتروني",
+      "ERROR" : "البريد غير صحيح"
+    },
+    "PASSWORD" : {
+      "LABEL" : "ادخل كلمة المرور",
+      "PLACEHOLDER" : "كلمة المرور",
+      "ERROR" : "كلمة المرور غير صحيحة"
+    },"NAME" : {
+      "LABEL" : "ادخل الأسم",
+      "PLACEHOLDER" : "الأسم",
+      "ERROR" : "الأسم غير صحيح"
+    },
+    "PHONE" : {
+      "LABEL" : "ادخل رقم المحمول",
+      "PLACEHOLDER" : "الرقم المحمول",
+      "ERROR" : "الرقم غير صحيح"
+    },
+    "AGE" : {
+      "LABEL" : "ادخل السن",
+      "PLACEHOLDER" : "السن",
+      "ERROR" : "السن غير صحيح"
+    },
+    "GENDER" : {
+      "LABEL" : "ادخل الجنس",
+      "PLACEHOLDER" : "الجنس",
+      "VALUES" :{
+        "MALE" : "ذكر",
+        "FEMALE" : "أنثي"
+      }
+    },
+    "ISACTIVE" : {
+      "LABEL" : "متاح"
+    }
+  },
+  "PAGES":{
+    "EMPLOYEES" : "الموظفين",
+    "CREATEEMPLOYEE" : "اضافة موظف جديد",
+    "EDITEMPLOYEE" : "تعديل بياتات الموظف"
+  }
+}

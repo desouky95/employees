@@ -1,0 +1,52 @@
+<div class="fullpage signin-container">
+  <div class="col-lg-4 col-md-8 col-12">
+    <form class="e-form" [formGroup]="signinForm">
+      <div class="form-title">
+        <mat-label>
+          {{ "AUTH.SIGNIN" | translate }}
+        </mat-label>
+      </div>
+      <div class="form-content">
+        <div class="col-12 p-0 mb-2">
+          <mat-form-field class="w-100" appearance="fill">
+            <mat-label>{{ "INPUTS.EMAIL.LABEL" | translate }}</mat-label>
+            <input
+              matInput
+              placeholder="{{ 'INPUTS.EMAIL.PLACEHOLDER' | translate }}"
+              formControlName="email"
+            />
+            <mat-error>{{ "INPUTS.EMAIL.ERROR" | translate }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 p-0 mb-2">
+          <mat-form-field class="w-100" appearance="fill">
+            <mat-label>{{ "INPUTS.PASSWORD.LABEL" | translate }}</mat-label>
+            <input
+              matInput
+              placeholder="{{ 'INPUTS.PASSWORD.PLACEHOLDER' | translate }}"
+              formControlName="password"
+              required
+            />
+            <mat-error>{{ "INPUTS.PASSWORD.ERROR" | translate }}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 p-0">
+          <button [disabled]="!signinForm.valid" (click)="signin()" mat-raised-button color="primary" class="w-100">
+            {{ "ACTIONS.SUBMIT" | translate }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="language-picker col-lg-1 col-md-4 col-4">
+    <mat-form-field class="w-100">
+      <mat-select
+        (selectionChange)="updateLanguage($event.value)"
+        [(value)]="currentLanguage"
+      >
+        <mat-option [value]="'en'">EN </mat-option>
+        <mat-option [value]="'ar'">AR</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

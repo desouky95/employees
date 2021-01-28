@@ -1,0 +1,69 @@
+.w-100vw {
+  width: 100vw;
+}
+.h-100vh {
+  height: 100vh;
+}
+.fullpage {
+  @extend .w-100vw, .h-100vh;
+}
+
+@for $var from 1 to 100 {
+  .wp-#{$var}{
+    width: $var * 1%;
+  }
+
+  .flex-#{$var}{
+    flex : ($var / 100);
+  }
+}
+
+.signin-container {
+  background: $light-cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .language-picker {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle;
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+  .mat-table .mat-row {
+    border-bottom: 5px solid #ddd;
+    display: block;
+  }
+  .mat-table .mat-cell {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: right;
+    font-weight: bold;
+    height: 30px;
+    margin-bottom: 4%;
+  }
+  .mat-table .mat-cell:before {
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    font-size: 0.85em;
+  }
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+  .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+  }
+}

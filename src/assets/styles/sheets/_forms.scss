@@ -1,0 +1,13 @@
+.e-form{
+  background: $light;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: 0 0 1em 0.1em rgba(#191919,0.1);
+  direction: inherit;
+  .form-title{
+    font-weight: bold;
+    width: fit-content;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+}

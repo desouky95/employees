@@ -1,0 +1,22 @@
+<mat-toolbar class="header-toolbar" color="primary">
+  <div class="d-flex align-items-center">
+    <button (click)="toggle()" mat-icon-button aria-label="Menu Toggler">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span i18n="App Header|App's toolbar label">{{
+      "HEADER.TITLE" | translate
+    }}</span>
+    <span class="example-spacer"></span>
+  </div>
+  <div class="col-3 col-lg-1">
+    <mat-form-field class="w-100">
+      <mat-select
+        (selectionChange)="langValueChange()"
+        [(value)]="currentLanguage"
+      >
+        <mat-option [value]="'en'">EN </mat-option>
+        <mat-option [value]="'ar'">AR</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</mat-toolbar>

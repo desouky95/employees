@@ -1,17 +1,21 @@
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { LanguageService } from './services/language/language.service';
 
+let langService: LanguageService;
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
+      imports: [TranslateModule.forRoot()],
+      providers: [LanguageService, TranslateService],
     }).compileComponents();
+  });
+
+  beforeEach(() => {
+    langService = TestBed.get(LanguageService);
   });
 
   it('should create the app', () => {
@@ -26,10 +30,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('employees');
   });
 
-  it('should render title', () => {
+  it(`should have current used language`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('employees app is running!');
+    const app = fixture.componentInstance;
+    langService.initLanguage();
+    langService.currentLanguage.subscribe((e) => {
+      expect(app.currentLanguage.language).toBe(e.language);
+    });
   });
 });
